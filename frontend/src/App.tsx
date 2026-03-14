@@ -11,7 +11,7 @@ function RegistrationClosedBanner({ group }: { group: Group }) {
         <div className="bg-red-50 border border-red-200 text-red-700 rounded-2xl p-8 max-w-2xl w-full text-center">
             <h2 className="text-xl font-bold mb-2">Registration is not active</h2>
             <p className="text-red-600">
-                Registration for <span className="font-semibold">{group.title}</span> opens on{' '}
+                Registration for <span className="font-semibold">{group.title}</span> opens on{'  '}
                 {new Date(group.registrationOpens).toLocaleDateString('en-GB', {
                     year: 'numeric', month: 'long', day: 'numeric'
                 })}
