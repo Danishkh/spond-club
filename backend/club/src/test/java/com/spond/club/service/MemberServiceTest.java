@@ -68,7 +68,7 @@ class MemberServiceTest {
     }
 
     @Test
-    void register_throws_whenFormNotFound() {
+    void register_throws_whenGroupNotFound() {
         when(groupRepository.findById("INVALID")).thenReturn(Optional.empty());
 
         RegistrationRequest request = new RegistrationRequest();

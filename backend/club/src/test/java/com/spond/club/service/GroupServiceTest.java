@@ -28,7 +28,7 @@ class GroupServiceTest {
     private GroupService groupService;
 
     @Test
-    void getForm_returnsFormDto_whenFormExists() {
+    void getForm_returnsGroupDto_whenGroupExists() {
         MemberType memberType = new MemberType();
         memberType.setId("MT1");
         memberType.setName("Active");
@@ -53,7 +53,7 @@ class GroupServiceTest {
     }
 
     @Test
-    void getForm_throwsException_whenFormNotFound() {
+    void getGroup_throwsException_whenGroupNotFound() {
         when(groupRepository.findById("INVALID")).thenReturn(Optional.empty());
 
         assertThrows(NoSuchElementException.class, () -> groupService.getGroup("INVALID"));

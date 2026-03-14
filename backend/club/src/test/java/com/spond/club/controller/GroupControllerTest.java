@@ -27,7 +27,7 @@ class GroupControllerTest {
     private GroupService groupService;
 
     @Test
-    void getForm_returns200_whenFormExists() throws Exception {
+    void getGroup_returns200_whenGroupExists() throws Exception {
         GroupDto groupDto = new GroupDto(
                 "group1",
                 "britsport",
@@ -47,7 +47,7 @@ class GroupControllerTest {
     }
 
     @Test
-    void getForm_returns404_whenFormNotFound() throws Exception {
+    void getGroup_returns404_whenGroupNotFound() throws Exception {
         when(groupService.getGroup("INVALID")).thenThrow(new NoSuchElementException("INVALID"));
 
         mockMvc.perform(get("/api/forms/INVALID"))
